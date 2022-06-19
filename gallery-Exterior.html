@@ -35,11 +35,8 @@
        
      
     
-    
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/style.css" rel="stylesheet">
-    
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.css" rel="stylesheet">
-     <!-- <script src="/staticfiles/landing_page_gen/render.js"></script>   -->
     <script src="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.js"></script> 
 </head>
 
@@ -82,7 +79,6 @@
     <div> Galleries
         <i class="fa fa-caret-down"></i>
     </div>
-    <!-- for desktop -->
     <div class="hidden lg:group-hover:opacity-100 lg:opacity-0 transition duration-500 ease-in-out lg:flex flex-col bg-white z-50 w-full min-w-max absolute top-10 shadow-lg rounded-md px-4 py-4 space-y-3">
         
             <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Interior"> Interior </a>
@@ -90,7 +86,6 @@
             <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Exterior"> Exterior </a>
         
     </div> 
-    <!-- for mobile b/c can't enable tailwind variants w/o postcss build -->
     <div id='mobile-dropdown' class="lg:hidden hidden transition duration-500 ease-in-out flex flex-col bg-white z-50 w-full min-w-max absolute top-10 shadow-lg rounded-md px-4 py-4 space-y-3">
         
             <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Interior"> Interior </a>
@@ -221,37 +216,110 @@
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2  style= "color:#000000" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Exterior</h2>
             <h2  style= "color:#264180" class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">Our Best Work</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2a9d0fb-5375-48ef-bb94-271bf9347d72.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e926b2d1-e6db-4be7-83cb-8e5d14f8bbb8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/74ef8f59-0897-4988-9947-3eda566daad8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/458fa70d-d589-4b9e-ad2a-626f41ba7635.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/bb289960-abc2-4c9f-aa8f-0dfa6d91791a.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/865ca7b0-bac0-4fe7-af8f-d59f84c19fed.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
-                <!-- <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/a2a9d0fb-5375-48ef-bb94-271bf9347d72.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/e926b2d1-e6db-4be7-83cb-8e5d14f8bbb8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/74ef8f59-0897-4988-9947-3eda566daad8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/458fa70d-d589-4b9e-ad2a-626f41ba7635.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/bb289960-abc2-4c9f-aa8f-0dfa6d91791a.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/865ca7b0-bac0-4fe7-af8f-d59f84c19fed.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   > -->
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/38a6f627-22a4-427a-a52b-a9be992d94b5.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a6355fb2-9513-44fe-9486-a18211315a7c.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/8054fca1-2f01-4334-9b99-eff8371b576f.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0e18afc1-aabf-467e-9f97-4f46cfdcf25d.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/47f8d50c-c524-4a47-88ac-7d40dca93e6a.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a52d1763-1bd3-4fef-87e2-762089a4b548.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/9f4efac3-46ed-48ac-9441-815ccdcc8453.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/7b49dbf5-e8c1-495a-8f36-3175a606ad6b.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/68ece7e3-2c7a-46a0-b737-8bf5d7188d5f.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/d37a104b-5d67-411e-ae49-95d078b27ef9.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ebb38b9f-9a4a-4a91-98b4-0b92971e382c.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6654da1d-2025-4455-bf3e-29788a5a6637.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e14c19b6-c79a-43a5-a0d2-4a7e16e616d1.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/350cad1d-235b-41ce-9af8-fc62c76856f0.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5eccf30c-01c7-4443-8e1f-dfc1fe253a41.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/f2ea97d8-dc30-413b-b993-380ac921ed3a.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/b4c22e6b-6d4e-4a43-b4af-942bee5a6716.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0c9a9f82-4a55-4388-bd66-52cad8c1e65f.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1ff1a0c1-0bf8-4961-9fed-5e5be0d74bfb.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1040e38f-3a41-408f-aa5b-e2a7596dfadf.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/865ca7b0-bac0-4fe7-af8f-d59f84c19fed.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/bb289960-abc2-4c9f-aa8f-0dfa6d91791a.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/458fa70d-d589-4b9e-ad2a-626f41ba7635.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/74ef8f59-0897-4988-9947-3eda566daad8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e926b2d1-e6db-4be7-83cb-8e5d14f8bbb8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2a9d0fb-5375-48ef-bb94-271bf9347d72.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2a9d0fb-5375-48ef-bb94-271bf9347d72.jpeg"  alt = "Photo number 15 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a2a9d0fb-5375-48ef-bb94-271bf9347d72.jpeg"  alt = "Photo number 15 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div> -->
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/38a6f627-22a4-427a-a52b-a9be992d94b5.png"  alt="photo of best work"   loading="lazy" ></div>
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e926b2d1-e6db-4be7-83cb-8e5d14f8bbb8.jpeg"  alt = "Photo number 16 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/e926b2d1-e6db-4be7-83cb-8e5d14f8bbb8.jpeg"  alt = "Photo number 16 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div> -->
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a6355fb2-9513-44fe-9486-a18211315a7c.png"  alt="photo of best work"   loading="lazy" ></div>
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/74ef8f59-0897-4988-9947-3eda566daad8.jpeg"  alt = "Photo number 17 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/74ef8f59-0897-4988-9947-3eda566daad8.jpeg"  alt = "Photo number 17 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div> -->
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/8054fca1-2f01-4334-9b99-eff8371b576f.png"  alt="photo of best work"   loading="lazy" ></div>
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/458fa70d-d589-4b9e-ad2a-626f41ba7635.jpeg"  alt = "Photo number 18 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/458fa70d-d589-4b9e-ad2a-626f41ba7635.jpeg"  alt = "Photo number 18 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div> -->
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0e18afc1-aabf-467e-9f97-4f46cfdcf25d.png"  alt="photo of best work"   loading="lazy" ></div>
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/bb289960-abc2-4c9f-aa8f-0dfa6d91791a.jpeg"  alt = "Photo number 19 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/bb289960-abc2-4c9f-aa8f-0dfa6d91791a.jpeg"  alt = "Photo number 19 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div> -->
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/47f8d50c-c524-4a47-88ac-7d40dca93e6a.png"  alt="photo of best work"   loading="lazy" ></div>
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/865ca7b0-bac0-4fe7-af8f-d59f84c19fed.jpeg"  alt = "Photo number 20 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/865ca7b0-bac0-4fe7-af8f-d59f84c19fed.jpeg"  alt = "Photo number 20 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div> -->
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a52d1763-1bd3-4fef-87e2-762089a4b548.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/9f4efac3-46ed-48ac-9441-815ccdcc8453.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/7b49dbf5-e8c1-495a-8f36-3175a606ad6b.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/68ece7e3-2c7a-46a0-b737-8bf5d7188d5f.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/d37a104b-5d67-411e-ae49-95d078b27ef9.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ebb38b9f-9a4a-4a91-98b4-0b92971e382c.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6654da1d-2025-4455-bf3e-29788a5a6637.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e14c19b6-c79a-43a5-a0d2-4a7e16e616d1.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/350cad1d-235b-41ce-9af8-fc62c76856f0.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 14; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5eccf30c-01c7-4443-8e1f-dfc1fe253a41.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 15; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/f2ea97d8-dc30-413b-b993-380ac921ed3a.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 16; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/b4c22e6b-6d4e-4a43-b4af-942bee5a6716.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 17; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0c9a9f82-4a55-4388-bd66-52cad8c1e65f.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 18; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1ff1a0c1-0bf8-4961-9fed-5e5be0d74bfb.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 19; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1040e38f-3a41-408f-aa5b-e2a7596dfadf.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 20; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/865ca7b0-bac0-4fe7-af8f-d59f84c19fed.jpeg"  alt = "Photo number 20 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 21; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/bb289960-abc2-4c9f-aa8f-0dfa6d91791a.jpeg"  alt = "Photo number 19 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 22; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/458fa70d-d589-4b9e-ad2a-626f41ba7635.jpeg"  alt = "Photo number 18 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 23; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/74ef8f59-0897-4988-9947-3eda566daad8.jpeg"  alt = "Photo number 17 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 24; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e926b2d1-e6db-4be7-83cb-8e5d14f8bbb8.jpeg"  alt = "Photo number 16 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 25; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2a9d0fb-5375-48ef-bb94-271bf9347d72.jpeg"  alt = "Photo number 15 of Copeland Painting&#x27;s best work performing a null job"   loading="lazy" ></div>
                     
                  
                                     
@@ -288,7 +356,7 @@
                                     </template>
                                     
                                     <template x-if="slide[1] != 'photo'  ">
-                                        <video class="object-contain max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
+                                        <video class="object-cover max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
                                         </video>
                                     </template> 
                                     
@@ -338,10 +406,8 @@
     
 
 <section  style= "background-color:#000000"   class="py-10 bg-gray-900">
-    
         <div class="flex flex-col justify-around text-center md:flex-row">
             <p class="order-last text-sm leading-tight text-gray-400 md:order-first"> Crafted with <a  href="https://www.prophone.com/prosite" class="  text-white ">ProPhone</a>. Built with ❤️ by our team. </p>
-             
             <ul class="flex flex-row flex-wrap text-center justify-center pb-3 lg:-ml-4 lg:-mr-4 text-sm">
                 <li> <a  style= "color:#264180"  href="#about" class="px-2 md:px-4 text-gray-400 hover:text-white">About Us</a> </li>
                 
@@ -360,6 +426,9 @@
                 
                 <li> <a  style= "color:#264180"  href="#find-us" class=" px-2 md:px-4 text-gray-400 hover:text-white">Service Areas</a></li>
                 
+                
+                <li> <a  style= "color:#264180"  href="copelandpaintingor.com/sitemap.xml" class=" px-2 md:px-4 text-gray-400 hover:text-white">Sitemap</a></li>
+                
             </ul>
         </div>
     </div>
@@ -367,7 +436,6 @@
 </div> 
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-  
 
 </body>
 </html>
